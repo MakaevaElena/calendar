@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 50%;
+            height: 10%;
+            background-color: rgb(252, 240, 225);
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        #treck {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: rgb(206, 206, 206);
+            width: 100%;
+            height: 15px;
+        }
+
+        #treck::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: rgb(111, 140, 235);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="range" id="treck">
+    </div>
+
+</body>
+
+</html>

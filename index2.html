@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 50%;
+            height: 300px;
+            background-color: beige;
+            margin: 50px auto;
+
+        }
+
+        .logos img {
+            width: 200px;
+        }
+
+        .left img,
+        .right img {
+            width: 100px;
+            height: 100px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="left.png" alt="left">
+        </div>
+        <div class="logos">
+            <img src="js.png" alt="js">
+        </div>
+        <div class="right">
+            <img src="right.png" alt="right">
+        </div>
+
+    </div>
+    <script>
+        const LOGOS = ['js.png', 'css.png', 'sass.png', 'boy.png'];
+        const right = document.querySelector('.right');
+        const left = document.querySelector('.left');
+        const logoImg = document.querySelector('.logos img');
+
+        let counter = 0;
+
+        right.addEventListener('click', () => {
+            counter++;
+            if (counter < LOGOS.length) {
+                right.style.opacity = '1';
+                left.style.opacity = '1';
+                logoImg.src = LOGOS[counter];
+                console.log(LOGOS[counter]);
+            } else {
+                right.style.opacity = '0';
+            }
+        });
+
+        left.addEventListener('click', () => {
+            counter--;
+            if (counter >= 0) {
+                right.style.opacity = '1';
+                left.style.opacity = '1';
+                logoImg.src = LOGOS[counter];
+                console.log(LOGOS[counter]);
+            } else {
+                left.style.opacity = '0';
+            }
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>

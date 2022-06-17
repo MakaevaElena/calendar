@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 40%;
+            background-color: bisque;
+            margin: 50px auto;
+            padding: 10px;
+        }
+
+        h4 {
+            margin: 0;
+            padding: 5px;
+            background-color: #7b9ab4;
+            border: 1px solid rgb(63, 63, 63);
+            color: whitesmoke;
+        }
+
+        p {
+            margin: 0;
+            padding: 5px;
+            background-color: #beecf8;
+            border: 1px solid rgb(63, 63, 63);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="info">
+            <div class="block1 block">
+                <h4>Заголовок 1</h4>
+                <p class="hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, itaque! Lorem ipsum
+                    dolor sit amet
+                    consectetur adipisicing elit. Iusto adipisci quae porro nostrum dicta quod
+                    molestiae accusantium cumque veniam atque!</p>
+            </div>
+            <div class="block2 block">
+                <h4>Заголовок 2</h4>
+                <p class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto adipisci quae porro
+                    nostrum dicta quod
+                    molestiae accusantium cumque veniam atque!</p>
+            </div>
+            <div class="block3 block">
+                <h4>Заголовок 3</h4>
+                <p class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto adipisci quae porro
+                    nostrum dicta quod
+                    molestiae accusantium cumque veniam atque!</p>
+            </div>
+            <div class="block4 block">
+                <h4>Заголовок 4</h4>
+                <p class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto adipisci quae porro
+                    nostrum dicta quod
+                    molestiae accusantium cumque veniam atque!</p>
+            </div>
+        </div>
+
+        <script>
+            const blocks = document.querySelectorAll('.block');
+
+            [...blocks].forEach(block => {
+                block.addEventListener('click', () => {
+                    [...blocks].forEach(block => block.querySelector('p').classList.add('hidden'));
+                    block.querySelector('p').classList.toggle('hidden');
+                });
+            });
+
+        </script>
+    </div>
+</body>
+
+</html>
